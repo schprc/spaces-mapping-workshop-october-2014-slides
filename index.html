@@ -1,0 +1,1093 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Projection Mapping on 3D Surfaces</title>
+        <meta name="author" content="Co-authored by Krisjanis Rijnieks and Irina Spicaka">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/custom.css">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-state="hide-overlay">
+                    <h1>Projection Mapping on 3D Surfaces</h1>
+                    <h2>Workshop / <a href="http://schoolofma.org/">Betahaus Berlin 2014</a></h2>
+                    <p>by <a href="http://rijnieks.lv">Krisjanis Rijnieks</a> and <a href="http://irina.spicaka.info">Irina Spicaka</a></p>
+                </section>
+
+                <section class="stack" data-state="show-overlay">
+                    <section>
+                        <h2>What we do and who we are?</h2>
+                        <p>
+                            For the past years we have been working with different projects that usually involve</p>
+                        <ul>
+                            <li>Graphic design</li>
+                            <li>Programming</li>
+                            <li>Projection mapping</li>
+                            <li>Electronics</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <p>.. as well as creating art installations and
+                        <ul>
+                            <li>VJ-ing</li>
+                            <li>Curating</li>
+                            <li>Organizing workshops</li>
+                            <li>And audiovisual events</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Irina Spicaka</h3>
+                        <p>
+                            Irina holds BA and MA in Visual Communication and Audiovisual Arts, has studied at the Art Academy of Latvia and Brera Academy in Milan, Italy. In her MA thesis, she was focusing on projection mapping, generative art and audiovisual composition. 
+                        </p>
+                        <p>
+                            Irina works as a graphic designer, curator as well as journalist in fields related to art, business and technology.
+                        </p> 
+                    </section>
+                    
+                    <section>
+                        <h3>Krisjanis Rijnieks</h3>
+                            <p>
+                                For the past few years, Krisjanis has been exploring different media, programming languages and uses of technology and finally has arrived to a point where he can see how to finally complete his MA studies. 
+                            </p>
+                            <p>
+                                He is a student at the New Media MA programme of the Aalto University of Art, Design and Architecture in Helsinki and also has a background in painting.
+                            </p>
+                    </section>
+                    <section>
+                        <h3>CodeBark and CC4AV</h3>
+                        <p>
+                            We run a small digital media studio <a href="http://www.codebark.com/">CodeBark</a> and are also developing the <a href="http://cc4av.info">CC4AV</a> (Creative Coding for Live Audio and Visuals) platform that works as a placeholder for workshops and other activities that we have done in Helsinki (<a href="http://www.pixelache.ac/pixelversity/av-culture/">Pixelache pfatform</a>), Riga (<a href="http://www.skanumezs.lv/en/about-us/">Skaņu mežs festival</a>) and Helsingor (<a href="http://clickfestival.dk/">Click festival</a>) so far. 
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3> We are also collaborating with</h3>
+                        <ul>
+                            <li><a href="http://schoolofma.org/programs/">School of Machines</a></li>
+                            <li><a href="http://www.fablab-berlin.org/en/">Fab Lab Berlin</a></li>
+                            <li><a href="http://www.betahaus.com/berlin/education/">Betahaus Berlin</a></li>
+                        </ul>
+                    </section>
+                </section> <!-- /Who we are? -->
+
+                <section>
+                    <section>
+                        <h2>Our Projects</h2>
+                        <p>Latest projects that have been done by us in the past years.</p>
+                    </section>
+                     <section>
+                        <h3>School of Machines 2014</h3>
+                        <p>We did Projection Mapping on Spatial Objects workshop within this year's School of Machines in Berlin, Germany.
+                    </section>
+                    <section>
+                        <img src="img/school-of-ma-01.jpg" alt="School of Machines 1">
+                    </section>
+                    <section>
+                        <img src="img/school-of-ma-02.jpg" alt="School of Machines 2">
+                    </section>
+                    <section>
+                        <img src="img/school-of-ma-03.jpg" alt="School of Machines 3">
+                    </section>
+                    <section>
+                        <iframe src="//player.vimeo.com/video/100820299?title=0&amp;byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </section>
+                    <section>
+                        <h3>Click Festival 2014</h3>
+                        <p>We did Projection Mapping with the Raspberry Pi workshop within this year's Click festival in Helsingor, Denmark. In collaboration with <a href="http://www.pixelache.ac">Pixelache</a> Helsinki.</p>
+                    </section>
+                    <section>
+                        <img src="img/click-01.jpg" alt="Click 1">
+                    </section>
+                    <section>
+                        <img src="img/click-02.jpg" alt="Click 2">
+                    </section>
+                    <section>
+                        <img src="img/click-03.jpg" alt="Click 3">
+                    </section>
+                    <section>
+                        <iframe src="//player.vimeo.com/video/99651464?title=0&amp;byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </section>
+                    <section>
+                        <h3>You and Now</h3>
+                        <p>Interactive projection mapping installation within the annual Glow Riga festival in Riga, Latvia, November 2013. In collaboration with <a href="http://mooz.lv">Mooz</a> agency</p>
+                    </section>
+                    <section>
+                        <iframe src="//player.vimeo.com/video/99646304?title=0&amp;byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </section>
+                    <section>
+                        <img src="img/image1.png" alt="You and Now">
+                    </section>
+                    <section>
+                        <h3>Elves on Plane</h3>
+                        <p>Projection mapping on one of airBaltic airline planes for their annual Christmas campaingn. In collaboration with <a href="http://cube.lv">Cube</a> digital agency.</p>
+                    </section>
+                    <section>
+                        <iframe width="800" height="450" src="//www.youtube.com/embed/f-UinluQJpE?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </section>
+                    <section>
+                        <h3>Metasphere</h3>
+                        <p>Projection mapping installation and audio-visual performance.</p>
+                    </section>
+                    <section>
+                        <img src="img/metasphere-01.jpg" alt="Metasphere 1">
+                    </section>
+                    <section>
+                        <img src="img/metasphere-02.jpg" alt="Metasphere 2">
+                    </section>
+                    <section>
+                        <img src="img/metasphere-03.jpg" alt="Metasphere 3">
+                    </section>
+                    <section>
+                        <iframe src="//player.vimeo.com/video/69604996?title=0&amp;byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </section>
+                    <section>
+                        <h3>Subatomic Particles</h3>
+                        <p>Audiovisual event during the White Night 2013 in Riga, Latvia.</p>
+                    </section>
+                    <section>
+                        <iframe src="//player.vimeo.com/video/88567760?title=0&amp;byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </section>
+                    <section>
+                        <h3>CC4AV Event Series</h3>
+                        <p>Creative Coding for Live Audio and Visuals event series with workshops and audiovisual performances.</p>
+                    </section>
+                    <section>
+                        <iframe src="//player.vimeo.com/video/98737686?title=0&amp;byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </section>
+                    <section>
+                        <h3>More</h3>
+                        <ul>
+                            <li><a href="https://vimeo.com/user25615586">Metasphere Vimeo channel</a></li>
+                            <li><a href="http://cc4av.info">Creative Coding for Live Audio and Visuals website</a></li>
+                            <li><a href="https://www.facebook.com/cc4av?ref=hl&ref_type=bookmark">CC4AV on Facebook</a></li> 
+                            <li><a href="https://vimeo.com/codebark">CodeBark Vimeo channel</a></li>
+                            <li><a href="http://codebark.com">CodeBark website</a></li>
+                        </ul>
+                    </section>
+
+                </section><!-- / Our Projects -->
+
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Projection Mapping</h2>
+                    </section>
+
+                    <section>
+                        <h3>Multiple Meaning of Projection Mapping</h3>
+                        <p>
+                            The term <b><i>mapping</i></b> highlights the role of space in the context of visual art as this term includes a function – real time projections adjusted to spatial objects.
+                        </p>
+    
+                        <small>
+                            The term <i><b>mapping</b></i> is also used in the computer sphere, for example, aligning peripherals with software parameters. It is possible to write on a personal computer’s screen due to the mapping of the keyboard with software functionality.
+                        </small>
+
+                        <p>
+                            <i><b>Projection mapping</b></i> or real time projections adjusted to spatial objects is a recently created set of electronic audio visual media methods which allows to surpass standard-size projections multiplying the picture, as well as to adjust the picture for different surfaces.
+                        </p>
+                    </section>
+
+                       <section>
+                        <h3>A brief history</h3>
+                        <blockquote><small>
+                            While projection mapping has recently exploded into the consciousness of artists and advertisers everywhere, the history of projection mapping dates back longer than you may imagine.
+                            <br> <br>
+                            If you try Googling for “Projection Mapping” you won’t find anything older than 3 years. That is because projection mapping’s older, academic name is “Spatial Augmented Reality”. The field is also known as “video mapping”, but projection mapping seems to be winning out in the United States.
+                            <br> <br>
+                            For the purposes of this history, I’m only including work that considered projection onto an arbitrarily complex surfaces. Projection onto flat and cylindrical/spherical surfaces has a much older history and goes back to the invention of cinema.
+                            <br> <br>
+                            </small>
+                         </blockquote>
+                         <small>
+                            Read more in an article with illustrations <a href="http://projection-mapping.org/the-history-of-projection-mapping/">The Illustrated History of Projection Mapping</a> by Brett Jones.
+                            <br>
+                        </small>
+                    </section>
+
+                    <section>
+                        <h3>Inventions chronologically</h3>
+                          <small>
+                            <li> The first known instance of projection onto a non-flat surface dates back to the 1969 opening of the Haunted Mansion ride in Disneyland. These were accomplished by filming head-shots of the singers (with 16 mm film) and then projecting this film onto busts of their faces.</li><br>
+                            <li> The next projection mapping instance comes in 1980, with the immersive film installation Displacements by Michael Naimark. In this art installation a living room with two performers were filmed with a rotating camera, then the camera was replaced with a projector. The result is rotating projection mapping.</li><br>
+                            <li> Disney not only pioneered the technology of projection mapping, they also made the earliest patent in the space in 1991. Entitled “Apparatus and method for projection upon a three-dimensional object“. It essentially describes a system for digitally painting an image onto “a countoured, three-dimensional object.”</li>
+                        </small>
+                    </section>
+
+                     <section>
+                          <small>
+                            <li> In 1994, GE also has an early patent for a “A system and method for precisely superimposing images of computer models in three-dimensional space to a corresponding physical object in physical space.”</li><br>
+                            <li>1998. Projection mapping really started to get traction when it was pursued in academia. “Spatial Augmented Reality” was born out of the work by at UNC Chapel Hill by Ramesh Raskar, Greg Welch, Henry Fuchs and Deepak Bandyopadhyay. It all got started with a paper The Office of the Future. The Office of the Future envisioned a world where projectors could cover any surface. Instead of staring at a small computer monitor, we would be able to experience augmented reality right from our desk. This means we could Skype with life-size versions of our office mates, view life-size virtual 3D models. This work even featured an early real-time, imperceptible 3D scanner (like the Kinect).</li>
+                        </small>
+                    </section>
+
+                    <section>
+                        <small>
+                            <li>1999. You may know John Underkoffler as the designer who invented the Minority Report interface, and the Chief Scientist of Oblong Industries, Inc. But before that, he pioneered some of the early work in interactive projection mapping. He introduced the concept of the I/O Bulb (Input/Output Bulb), namely a projector coupled with a camera that could one be as ubiqitous as a traditional light bulb.</li><br>
+                            <li> In 2001 Raskar continued with interactive projections and paintings on still and moving objects.</li><br>
+                            <li>in 2004. From there Raskar went on to explore moveable projectors (predicting the pico projectors of the future). These hand-held smart-projectors are aware of their position and orientation through a variety of sensors. They demonstrated using smart projectors to aid in warehouse inventory and maintenance.</li><br>
+                            <li>In period of 2005 to 2006 Oliver Bimber explored projecting onto paintings and converting drapes into projection screens.</li><br> <br> <br>
+                         </small>
+                         <small>
+                            See more with visual examples in article <a href="http://projection-mapping.org/the-history-of-projection-mapping/">The Illustrated History of Projection Mapping</a> by Brett Jones.
+                            <br>
+                        </small>
+                    </section>
+
+
+                    <section>
+                        <h3>Why It Has Been Invented?</h3>
+                        <blockquote><small>
+                            The reason why the projection mapping technique (as we know it today) was invented and developed further was a problem when there was no place for a screen at an event venue. The projector could also be put in a place somewhere in the room where the beam of light breaks partially on the ceiling, partially on one wall and plus on some other surface, thus being absolutely useless. There was no appropriate software at that time yet and specialists of the field worked out – if gamers had various advanced possibilities for using a room in 3D environment then VJs could use it dividing the room by walls and thus providing a more in-depth overview – getting beyond the classic rectangular screen.
+                            <br>
+                            </small>
+                         </blockquote>
+                         <small>
+                            Read more in an article <a href="https://medium.com/@irina_spicaka/8e82ed34278e">Spatial Projections</a> by Irina Spicaka.
+                            <br>
+                        </small>
+                         <small>
+                            Starting from 2011 commercial companies have started to develop the projection mapping as a serious, progressive technology. Nowadays if you are skilled enough you can make your own app and use it in your work and share it with others.
+                         </small>
+                    </section>
+
+                    <section>
+                        <h3>How can it be categorized</h3>
+                        <ol>
+                            <li>Fixed Surface Projection Mapping<br><small>Projection mapping on buildings or objects that are unlikely to change or, so to say, carved in stone. This allows much more predictable workflow for content creation.</small></li>
+                            <li>Variable Surface Projection Mapping<br><small>Projection mapping on previously unknown surfaces. This limits the content creation to elements of subjective choice. One might prepare videos for different types of surfaces (quads, triangles, circles) or generative visuals with adjustable parameters to fit many scenarios.</small></li>
+                            <li>Custom Surface Projection Mapping<br><small>The type of projection mapping that we will do in this workshop. It allows the most flexibility as you are the architect of your <u>own surface</u> and the author of your <u>own visuals</u>.</small></li>
+                        </ol>
+                    </section>
+                    <section>
+                            <blockquote><small>
+                                Back to the first type it should be noted that when making projections for certain surfaces, the work is first done in 3D and animation software — classical animation methods are applied, such as lightning and special effects, narrative. The most classic example is projection mapping on architectural facades used at light festivals. The buildings are modeled first (or ready-made, modeled prototypes of them are used) and the story is created taking into consideration the design of the particular building. The process is connected with very accurate work where each mistake (let it be no more than a millimeter) both, in animation process or in the projection on the particular surface can be seen as a bias which looks like a defect. Therefore this process cannot be associated with real time performance.
+                            </small>
+                            </blockquote>
+                            <small>
+                                 Read more in an article <a href="https://medium.com/@irina_spicaka/8e82ed34278e">Spatial Projections</a> by Irina Spicaka.
+                            </small>
+                    </section>
+                </section>  <!-- /Projection Mapping -->
+                
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Where projection mapping can be used?</h2>
+                    </section>
+                    <section>
+                        <ul>
+                            <li><a href="https://vimeo.com/10089534">Stage Design </a> involved in Vj-ing (inluding <a href="https://vimeo.com/62934464">Light Mapping </a> ) </li>
+                            <li><a href="https://vimeo.com/21117280">Audiovisual Performance</a></li> 
+                            <li><a href="https://vimeo.com/32811205">Art Installation</a></li>
+                            <li><a href="https://vimeo.com/34025760"> Scenography </a> and <a href="https://www.youtube.com/watch?v=lX6JcybgDFo"> Motion Art </a> </li>
+                            <li><a href="https://vimeo.com/48284012"> Large Scale Projections </a> on <a href="https://vimeo.com/18888136"> Architecture </a></li>
+                            <li> <a href="https://www.youtube.com/watch?v=LlTtj0-FG80"> Window Display </a> and <a href="https://vimeo.com/82705937">Store Design</a></li>
+                        </ul>
+                    </section> 
+                </section> <!-- /Where it* can be used? -->
+
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Tools</h2>
+                        <p>Decent software for creating media content and projection mapping.</p>
+                    </section>
+                     <section>
+                        <h3>Sketching tools</h3>
+                        
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="http://www.adobe.com/products/illustrator.html">Adobe Illustrator</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.inkscape.org/en/">Inkscape</a></td>
+                                    <td>Free and open source</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.adobe.com/products/photoshop.html">Adobe Photoshop</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.gimp.org/">Gimp</a></td>
+                                    <td>Free and open source</td> 
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>3D Modeling tools</h3>
+                        
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="http://www.blender.org/">Blender</a></td>
+                                    <td>Free and open source</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.maxon.net/products/cinema-4d-studio/who-should-use-it.html">Cinema 4D</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.autodesk.com/products/autodesk-3ds-max/overview">Max3D</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.autodesk.in/products/autodesk-maya/overview">Maya</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Projection Mapping</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="http://www.madmapper.com/">MadMapper</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.modul8.ch">Model8</a> and <a href="http://resolume.com/">Resolume</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.derivative.ca/">TouchDesigner</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://hv-a.com/lpmt/?page_id=2">LPMT</a></td>
+                                    <td>Free and open-source</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://keystonep5.sourceforge.net/">Keystone</a></td>
+                                    <td>Free and open-source</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://cycling74.com/project/vpt-7-videoprojectiontool/">VPT7</a></td>
+                                    <td>Free</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Visual programming languages</h4>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="http://quartzcomposer.com/">Quartz Composer</a></td>
+                                    <td>Free</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://cycling74.com/products/max/">Max/MSP Jitter</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://vuo.org">Vuo</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.derivative.ca/">TouchDesigner</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Text based programming languages</h3>
+                        <table>
+                            <tr>
+                                <td><a href="http://www.processing.org/">Processing</a></td>
+                                <td>Free and open-source</td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://openframeworks.cc/">openFrameworks</a></td>
+                                <td>Free and open-source</td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://libcinder.org/">Cinder</a></td>
+                                <td>Free and open-source</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Game Engines</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="http://unity3d.com/">Unity 3D</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://www.unrealengine.com">Unreal Game Engine</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://wiki.blender.org/index.php/Doc:2.6/Manual/Game_Engine">Blender Game Engine</a></td>
+                                    <td>Free and open-source</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Frame-based animation</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="http://www.adobe.com/products/aftereffects.html">Adobe After Effects</a></td>
+                                    <td>Commercial</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.openshot.org">Open Shot Video Editor</a></td>
+                                    <td>Free and open-source</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://www.pencil-animation.org">Pencil</a></td>
+                                    <td>Free and open-source</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Protocols</h3>
+                        <p>Software that can bridge visual output from one software to another in real-time.</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><a href="http://syphon.v002.info">Syphon</a></td>
+                                    <td>Free, open-source and Mac only</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="http://spout.zeal.co">Spout</a></td>
+                                    <td>Free, Windows only</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </section> <!-- /Tools -->
+
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Tips and Tricks</h2>
+                        <p>Best practices from experience.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">1</span> Test it first</h3>
+                        <p>Before becomming too artistic, test if the technology works as intended.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">2</span> Backup working versions</h3>
+                        <p>If your solution works, save it somewhere safe so when you continue to add changes, you can always switch back to the version that actually did work.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">3</span> Know your surface</h3>
+                        <p>The more precise you will know the projection surface, the better. Especially when mapping outdoors on buildings.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">4</span> Sketching helps</h3>
+                        <p>Make sketches and storyboards before doing it for real. Going through the process that way initially will help you overcome difficulties before you encounter them in the production process.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">5</span> Always have your own adaptors</h3>
+                        <p>And cables. It might save you as well as others. Always have an extra cable and adaptor. It can make you the hero of the day. Or night.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">6</span> No screensavers</h3>
+                        <p>Switch off screensavers and sleep for both, power and battery modes, on your laptop.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">7</span> Cold corners</h3>
+                        <p>Disable hot corners or Exposé as it ruins the magic when a spectator notices what operating system are you using or that you have the same mess on the desktop as you have.</p>
+                    </section>
+                    <section>
+                        <h3><span class="list-number">8</span> No instant messaging</h3>
+                        <p>Disable Skype or any other kind of messenger or service that tends to irritate you when least necessary.</p>    
+                    </section>
+                </section> <!-- /Tips and Tricks -->
+
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Introduction to Blender</h2>
+                        <p>Creating a 3D surface for projection mapping in Blender.</p>
+                    </section>
+                    <section>
+                        <h3>Requirements</h3>
+                        <ul>
+                            <li>A computer</li>
+                            <li>A 3-button mouse</li>
+                            <li>Keyboard with numeric keypad (optional)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Tasks</h3>
+                        <ul>
+                            <li>Learn Blender basics</li>
+                            <li>Create your own 3D object</li>
+                            <li>Export it for assembly in real life</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Install Blender</h3>
+                        <ol>
+                            <li>Download Blender from <a href="http://www.blender.org/downloads">blender.org/downloads</a></li>
+                            <li>Install it on your computer</li>
+                            <li>Open it</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h3>Briefly about Blender</h3>
+                        <ul>
+                            <li>Blender is a free and open source 3D modelling suite. It supports modeling, rigging, animation, simulation, rendering, compositing and motion tracking, even video editing and game creation. Advanced users can code in Python to customize the application.</li>
+                            <li>The first version of Blender has been released in the summer of 2000</li>
+                            <li>Blender is cross-platform and runs equally well on Linux, Windows and Mac computers</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>3D Computer Graphics</h3>
+                        <ul>
+                            <li>Three-dimensional representation of coordinate values in 3D space</li>
+                            <li>Based on <a href="http://en.wikipedia.org/wiki/Cartesian_coordinate_system">Cartesian</a> coordinate system usually</li>
+                            <li>Uses a process called <a href="http://en.wikipedia.org/wiki/Rendering_(computer_graphics)">rendering</a> to represent 3D objects on a 2D screen</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <small><img src="img/cartesian-coord-sys.png" alt="Cartesian coordinate system"><br>
+                        Source: <a href="http://en.wikipedia.org/wiki/Cartesian_coordinate_system">Cartesian coordinate system</a> (Wikipedia)</small>
+                    </section>
+                    <section>
+                        <h3>3D Objects in 3D Software</h3>
+                        <ul>
+                            <li>Consists of <u>vertices</u></li>
+                            <li>Vertices form <u>faces</u></li>
+                            <li>Faces form <u>meshes</u></li>
+                            <li>Meshes form <u>objects</u></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Vertices</h3>
+                        <ul>
+                            <li>Vertices are Cartesian coordinates of a point in space</li>
+                            <li>Each vertex has a X, Y and Z coordinate</li>
+                            <li>(1.2, -4, 2.5) - this is a vertex as the computer sees it</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Faces</h3>
+                        <ul>
+                            <li>Are supposed to be flat surfaces most of the time</li>
+                            <li>A face is formed by no less than 3 vertices</li>
+                            <li>The simplest form of a face is a triangle</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Meshes</h3>
+                        <ul>
+                            <li>A mesh consists of one or more faces</li>
+                            <li>It can be a open or closed 3D object</li>
+                            <li>One or more meshes form objects in Blender</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Normals</h3>
+                        <ul>
+                            <li>Each face has a normal</li>
+                            <li>A vector that is usually perpendicular to the face and pointing outwards the object</li>
+                            <li>Is used by the rendering engine to calculate lightning</li>
+                        </ul>
+                    </section>
+                </section> <!-- /Workshop: Projection Mapping on 3D Objects -->
+
+                 <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Blender Shortcut and Cheatsheet</h2>
+                        <p>A couple of images that have been made to make the beginning of your Blender modeling life easier.</p>
+                    </section>
+                    <section>
+                        <img src="img/BlenderShortcutsPage0.jpg" alt="Blender Shortcuts 1">
+                    </section>
+                    <section>
+                        <img src="img/BlenderShortcutsPage1.jpg" alt="Blender Shortcuts 2">
+                    </section>
+                    <section>
+                        <img src="img/BlenderShortcutsPage2.jpg" alt="Blender Shortcuts 3">
+                    </section>
+                    <section>
+                        <img src="img/BlenderShortcutsPage3.jpg" alt="Blender Shortcuts 4">
+                    </section>
+                    <!--
+                    <section>
+                        <img src="img/BlenderShortcutsPage4.jpg" alt="Blender Shortcuts 5">
+                    </section>
+                    <section>
+                        <img src="img/BlenderShortcutsPage5.jpg" alt="Blender Shortcuts 6">
+                    </section>
+                    -->
+                    <section>
+                        <img src="img/Blender-Manual-Interface.jpg" alt="Blender Interface">
+                    </section>
+                    <section>
+                        <img src="img/Blender-Manual-Modeling-Object1.jpg" alt="Modeling Object 1">
+                    </section>
+                    <section>
+                        <img src="img/Blender-Manual-Modeling-Object2.jpg" alt="Modeling Object 2">
+                    </section>
+                     <section>
+                        <img src="img/Blender-Manual-Modeling-Object3.jpg" alt="Modeling Object 3">
+                    </section>
+                     <section>
+                        <img src="img/Blender-Manual-Modeling-Object4.jpg" alt="Modeling Object 4">
+                    </section>
+                     <section>
+                        <img src="img/Blender-Manual-Modeling-Object5.jpg" alt="Modeling Object 5">
+                    </section>
+                     <section>
+                        <img src="img/Blender-Manual-Modeling-Object6.jpg" alt="Modeling Object 6">
+                    </section>
+                     <section>
+                        <img src="img/Blender-Manual-Modeling-Object7.jpg" alt="Modeling Object 7">
+                    </section>
+                     <section>
+                        <img src="img/Blender-Manual-Modeling-Object8.jpg" alt="Modeling Object 8">
+                    </section>
+                    <section>
+                        <h3>More about Blender</h3>
+                        <p>A couple of links to websites that can help you get confortable with Blender</p>
+                        <ul>
+                            <li><a href="http://www.blender.org/support/tutorials/">blender.org</a><br><small>Blender main site tutorials. All the basics are there.</small></li>
+                            <li><a href="http://www.blendtuts.com">blendtuts.com</a><br><small>All kinds of Blender tutorials from the Blender user community.</small></li>
+                            <li><a href="http://youtube.com">YouTube</a><br><small>A lot of questions about Blender can be answered by searching in YouTube.</small></li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Exporting for assembly</h2>
+                        <p>To make a 3D object out of a 3D model we have to export it as a 2D surface</p>
+                    </section>
+                    <section>
+                        <h3>Install Export Paper Model plugin</h3>
+                        <ol>
+                            <li>Download Export Paper Model plugin for Blender:<br>
+                            <a href="https://github.com/addam/Export-Paper-Model-from-Blender">github.com/addam/Export-Paper-Model-from-Blender</a></li>
+                            <li>Open Blender User Preferences by hitting <u>Ctrl + Alt + U</u> while in Blender</li>
+                            <li>Go to <u>Addons</u> tab</li>
+                            <li>Click on <u>Install from File</u> button and select the downloaded io_export_paper_model.py file</li>
+                            <li>Enable the plugin by checking the box next to the plugin name in the Addons section</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h3>Prepare the Model for Exporting</h3>
+                        <ol>
+                            <li>Make sure that you use the correct units (metric) in Scene properties</li>
+                            <li>Make sure that the object has scale 1 along all axes</li>
+                            <li>If not, go to <u>Object › Apply › Scale</u> to make the current size of the object to be the default scale of it</li>
+                            <li>Triangulate all faces by entering edit mode (hit Tab), selecting all faces (hit A) and going to <u>Mesh › Faces › Triangulate Faces</u> or hitting <u>Ctrl + T</u></li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h3>Export Paper Model</h3>
+                        <ol>
+                            <li>Select the object</li>
+                            <li>Go to <u>File › Export › Paper Model (.svg)</u></li>
+                            <li>Adjust properties (detailed explanation in next slide)</li>
+                            <li>Chose destination folder and file name</li>
+                            <li>Hit the <u>Export Paper Model</u> button</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h3>Export Paper Model Properties</h3>
+                        <ul>
+                            <li>Scale<br><small>For precise output use scale 1:1 by entering 1 in the field. If you will attempt to export a cube that is 20cm wide, high and deep, also the exported faces will be 20cm wide and high.</small></li>
+                            <li>Page Size<br><small>Page size that will be used for laying out the unwrapped faces of the model. It should be bigger than the final drawing or the output will be scaled down to fit the page.</small></li>
+                            <li>Unfolder DPI<br><small>Dots Per Inch or resolution that will be used by the plugin to generate the drawing. Set it to 72 as it is the default screen resolution.</small></li>
+                            <li>Other properties<br><small>You can skip other properties as they depend on subjective taste. Experiment with them and adjust if needed.</small></li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Introduction to Quartz Composer</h2>
+                        <p>Generative Animation in Quartz Composer</p>
+                    </section>
+                    <section>
+                        <h3>Requirements</h3>
+                        <ul>
+                            <li>Mac OS X computer</li>
+                            <li>XCode, Apple Developer Tools</li>
+                            <li>with Quartz Composer</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>How to get XCode</h3>
+                        <ol>
+                            <li>Apple App Store<br>
+                                <small>Search for the latest version of XCode</small>
+                            </li>
+                            <li>Apple Developer Portal<br>
+                                <small>Sign in, go to <u>Mac › Downloads</u></small>
+                            </li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h3>Graphics Tools for XCode</h3>
+                        <p>As they are not a part of main XCode installation for some time, you have to download them separately from Apple Developer Portal: <a href="http://developer.apple.com/" target="_blank">developer.apple.com</a></p>
+                        <ol>
+                            <li>Sign in, go to <u>Mac › Downloads</u></li>
+                            <li>Search for <u>Graphics Tools</u></li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h3>Tasks</h3>
+                        <ul>
+                            <li>Learn Quartz Composer basics</li>
+                            <li>Create your own patches</li>
+                            <li>Use them in your projection mapping project</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Briefly about Quartz Composer</h3>
+                        <ul>
+                            <li>Quartz Qomposser node-based visual programming language that works by connecting patches and setting parameters.</li>
+                            <li>A set of patches can be combined in a macro patch. Macro patches can be placed in various hierarchies and can be edited.</li>
+                            <li>In Quartz Composer you can combine graphical and non-graphical technologies - Quartz 2D, Core Image, Core Video, OpenGL, QuickTime, MIDI, System Services and XML.</li> 
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Patches</h3>
+                        <p>There are 3 types of patches:</p>
+                        <ol>
+                            <li>Consumer<br>
+                                <small>Usually patches that render something on the screen</small>
+                            </li>
+                            <li>Processor<br>
+                                <small>Usually effects or other data processors</small>
+                            </li>
+                            <li>External<br>
+                                <small>MIDI controllers, keyboards, mice</small>
+                            </li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h3>Connections</h3>
+                        <ol>
+                            <li>Outputs connect to inputs</li>
+                            <li>Output has to be of the same datatype as the input</li>
+                            <li>You can connect an output to multiple inputs,<br>
+                            but not vice versa</li>
+                        </ol>
+                        <img src="img/connections.png" alt="Connections">
+                    </section>
+                    <section>
+                        <h3>Layers</h3>
+                        <p>Consumer patches are organized in layers. They are executed one after another according to the assigned layer number.</p>
+                        <img src="img/layers.png" alt="Layers">
+                    </section>
+                    <section>
+                        <h3>Help on Individual Patches</h3>
+                        <p>You can get help on individual patches by reading instructions in the Library panel.</p>
+                        <img src="img/patch-help.png" alt="Patch Help">
+                    </section>
+                    <section>
+                        <h3>More about Quartz Composer</h3>
+                        <ul>
+                            <li><a href="http://quartzcomposer.com">quartzcomposer.com</a><br>
+                                <small>Unofficial Quartz Composer user community website</small>
+                            </li>
+                            <li><a href="https://developer.apple.com/library/mac/documentation/graphicsimaging/conceptual/quartzcomposeruserguide/qc_intro/qc_intro.html#//apple_ref/doc/uid/TP40005381-CH201-TPXREF101">Quartz Composer User Guide</a><br>
+                                <small>with love from Apple</small>
+                            <li><a href="http://www.amazon.com/Learning-Quartz-Composer-Hands-Creating/dp/0321636945">Learning Quartz Composer</a><br>
+                                <small>by Graham Robinson and Surya Buchwald</small></li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Quartz Composer Step-by-step</h2>
+                        <p>Get used to the environment and learn</p>
+                    </section>
+                    <section>
+                        <img src="img/Quartz-Composer-1.jpg" alt="QC 1">
+                    </section>
+                    <section>
+                        <img src="img/Quartz-Composer-2.jpg" alt="QC 2">
+                    </section>
+                    <section>
+                        <img src="img/Quartz-Composer-3.jpg" alt="QC 3">
+                    </section>
+                    <section>
+                        <img src="img/Quartz-Composer-4.jpg" alt="QC 4">
+                    </section>
+                    <section>
+                        <img src="img/Quartz-Composer-5.jpg" alt="QC 5">
+                    </section>
+                    <section>
+                        <img src="img/Quartz-Composer-6.jpg" alt="QC 6">
+                    </section>
+                    <section>
+                        <img src="img/Quartz-Composer-7.jpg" alt="QC 7">
+                    </section>
+                    <section>
+                        <img src="img/Quartz-Composer-8.jpg" alt="QC 8">
+                    </section>
+                    <section>
+                        <img src="img/Quartz-Composer-9.jpg" alt="QC 9">
+                    </section>
+                    <section>
+                        <img src="img/Quartz-Composer-10.jpg" alt="QC 10">
+                    </section>
+                    <section>
+                        <img src="img/Quartz-Composer-11.jpg" alt="QC 11">
+                    </section>
+                    <section>
+                        <img src="img/Quartz-Composer-12.jpg" alt="QC 12">
+                    </section>
+                    <!--
+                    <section>
+                        <h3>Adjust Output for Digital Fabrication</h3>
+                        <p>As we are going to use a laser cutter to cut out parts of the objects, we have to manually prepare the 2D drawings so the laser cutter software can understand that.</p>
+                        <ul>
+                            <li>We are going to use <a href="http://www.inkscape.org">Inkscape</a></li>
+                            <li>We are going to separate faces</li>
+                        </ul>
+                    </section>
+                    -->
+                </section>
+
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Quartz Composer Advanced</h2>
+                        <p>Advanced Quartz Composer patches</p>
+                    </section>
+                    <section>
+                        <h3>Math patch</h3>
+                        <p>Executes a mathematical operation that involves 2 variables. Used for simple math operations like:</p>
+                        <ul>
+                            <li>(+) Addition</li>
+                            <li>(-) Substraction</li>
+                            <li>(*) Multiplication</li>
+                            <li>(/) Division</li>
+                            <li>(%) Modulo or remainder of division</li>
+                            <li>(Pow) Power, a number squared or cubed</li>
+                            <li>(Min) and (Max)<br>
+                                <small>for deciding which of the two variables is lesser or greater</small>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Mathematical Expression</h3>
+                        <p>Used for defining more complex mathematical equations (e.g. <u>round(a*b/c)*rand()</u>) than it is possible with the <u>Math</u> object. Select the patch and:</p>
+                        <ul>
+                            <li>Go to <u>Inspector › Settings</u> to define the equation</li>
+                            <li>Each letter that you use in the equation is automatically assigned as an input of the patch</li>
+                            <li>There is one single output that is called <u>Result</u></li>
+                            <li>You can use more predefined mathematical and programmatical functions like ceil(), floor(), rand(), log(), etc.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Iterator</h3>
+                        <ul>
+                            <li>A replicator, used as a macro patch - that means that you have to double click an instance of it and place your logic inside.</li>
+                            <li>A QC way of making <u>for</u>, <u>while</u> or other type of programmatical loop functionality.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Iterator Variables</h3>
+                        <ul>
+                            <li>Inside the Iterator patch you would use the <u>Iterator Variables</u> patch to get the <u>number of assigned iterations</u> and <u>current iteration index</u>.</li>
+                            <li>You can publish more inputs from within the Iterator patch to use the parameters along with Iterator Variables.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>JavaScript</h3>
+                        <ul>
+                            <li>If not enough with the Mathematical Expression patch.</li>
+                            <li>Can operate arrays (structures), strings as well as numbers.</li>
+                            <li>More input and output variable type possibilities than with the Mathematical Expression patch.</li>
+                            <li>Is quite heavy on the processor.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>GLSL and Open CL patches</h3>
+                        <p>If you know what is GLSL and Open CL, you can use your knowledge in Quartz Composer through these patches.</p>
+                    </section>
+                    <section>
+                        <h3>Kineme QC patches</h3>
+                        <p>You can find a lot of custom Quartz Composer patches in the Kineme Quartz Composer community website: <a href="http://kineme.net">kineme.net</a></p>
+                    </section>
+                </section>
+
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Projection Mapping with MadMapper</h2>
+                        <p>We have come so far</p>
+                    </section>
+                    <section>
+                        <h3>Summary</h3>
+                        <p>We are going to use our computers and available projectors to projection map a surface that has been prepared for this workshop.</p>
+                    </section>
+                    <section>
+                        <h3>A surface?</h3>
+                        <p>The surface for projection mapping has it's story on it's own. It has been created in Blender and then made real with the help of a lasercutter.</p>
+                    </section>
+                    <section>
+                        <h3>How is this going to work?</h3>
+                        <ol>
+                            <li>Split into groups.</li>
+                            <li>Download and install software.</li>
+                            <li>Create image or animation source.</li>
+                            <li>Have fun with projection mapping!</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h3>Software</h3>
+                        <p>We are going to use <a href="http://www.madmapper.com">MadMapper</a> during this workshop. Demo version is free, but you won't be able to save your projects with it.</p>
+                        <p>Use <a href="http://hv-a.com/lpmt/">LPMT</a> or <a href="http://hcgilje.wordpress.com/vpt/">VPT</a> instead if you like free software.</p>
+                    </section>
+                </section> 
+                <!-- /Workshop: Projection Mapping on Spatial Objects --> 
+
+                <section class="stack">
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>MadMapper Cheatsheet</h2>
+                        <p>A couple of images that have been made to make the beginning of your mad mapping life easier.</p>
+                    </section>
+                    <section>
+                        <img src="img/MadMapper-Interface-1.jpg" alt="MadMapper Interface 1">
+                    </section>
+                    <section>
+                        <img src="img/MadMapper-Interface-2.jpg" alt="MadMapper Interface 2">
+                    </section>
+                    <section>
+                        <img src="img/MadMapper-Interface-3.jpg" alt="MadMapper Interface 3">
+                    </section>
+                    <section>
+                        <img src="img/MadMapper-Interface-4.jpg" alt="MadMapper Interface 4">
+                    </section>
+                </section>
+            </div> <!-- /.slides -->
+        </div> <!-- /.reveal -->
+                
+
+        <div class="overlay slideshow-title">
+            Projection Mapping on 3D Surfaces
+        </div>
+
+        <div class="overlay slideshow-byline">
+            by <a href="http://rijnieks.lv" target="_blank">Krisjanis Rijnieks</a> and <a href="http://irina.spicaka.info" target="_blank">Irina Spicaka</a>
+        </div>
+
+        <div class="overlay slideshow-url">
+            Slideshow URL: 
+            <a href="http://ej.uz/betamapping" title="Projection Mapping on Spatial Objects - Betahaus, August 2014">http://ej.uz/betamapping</a>
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+            Reveal.addEventListener( 'ready', function( event ) {
+                if ( event.indexh == 0 ) {
+                    removeOverlayAnimationClasses();
+                    $('.overlay').addClass('initially-hidden');
+                    $('.slideshow-url').removeClass('initially-hidden');
+                } else {
+                    showOverlay();
+                }
+            } );
+
+            Reveal.addEventListener( 'slidechanged', function( event ) {
+                if ( event.indexh == 0 ) {
+                    hideOverlay();
+                } else {
+                    if ( !$('overlay').hasClass('fadein-ani') ) {
+                        showOverlay();
+                    }
+                }
+            } );
+
+            var showOverlay = function() {
+                removeOverlayAnimationClasses();
+                $('.overlay').addClass('fadein-ani');
+                $('.slideshow-url').removeClass('fadein-ani');
+            }      
+
+            var hideOverlay = function() {
+                removeOverlayAnimationClasses();
+                $('.overlay').addClass('fadeout-ani');
+                $('.slideshow-url').removeClass('fadeout-ani');
+            }
+
+            var removeOverlayAnimationClasses = function() {
+                if ( $('.overlay').hasClass('fadein-ani') ) {
+                    $('.overlay').removeClass('fadein-ani');
+                }
+
+                if ( $('.overlay').hasClass('hadeout-ani') ) {
+                    $('.overlay').removeClass('fadein-ani');
+                }
+
+                if ( $('.overlay').hasClass('initially-hidden') ) {
+                    $('.overlay').removeClass('initially-hidden');
+                }
+            }
+        </script>
+    </body>
+</html>
